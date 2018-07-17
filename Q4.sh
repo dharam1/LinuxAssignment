@@ -1,0 +1,14 @@
+#!/bin/sh
+echo "Enter file name: "
+read file_name
+echo "Enter Sentence:"
+read sentence
+if [ ! -e "${file_name}_file" ] #check if file exist or not 
+then
+	touch "${file_name}_file"
+	echo "$sentence " > "${file_name}_file"
+	echo "File Created and sentence added"
+else
+	echo "$sentence" >> "${file_name}_file"
+	echo "Only Sentence Appended"
+fi
