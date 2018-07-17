@@ -5,7 +5,7 @@ echo "Enter Sentence:"
 read sentence
 if [ ! -e "${file_name}_file" ] #check if file exist or not 
 then
-	touch "${file_name}_file"
+	touch "${file_name}_file" #create a file
 	echo "$sentence " > "${file_name}_file"
 	echo "File Created and sentence added"
 else
